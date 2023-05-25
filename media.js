@@ -8,12 +8,13 @@ const listaDeAlunosEMedias = [alunos, medias];
 
 function encontrarMedia(aluno){
     if (listaDeAlunosEMedias[0].includes(aluno)){
-        const iAluno = listaDeAlunosEMedias[0].indexOf(aluno)
-        const media = listaDeAlunosEMedias[1][iAluno]
+        const [alunos, medias] = listaDeAlunosEMedias
+        const indiceAluno = alunos.indexOf(aluno)
+        const media = medias[indiceAluno]
         console.log(`A média de ${aluno} é ${media} `)
     } else {
         console.log(`Estudante não encontrado!`)
     }
 }
 
-encontrarMedia("Caio");
+encontrarMedia("João");
